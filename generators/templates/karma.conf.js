@@ -6,7 +6,7 @@ module.exports = function (config) {
         colors: false,
         frameworks: ['jasmine'],
         browsers:['PhantomJS'],
-        files: ['./tests/**/spec.js'],
+        files: ['./test/**/spec.js'],
 
        // reporters: ['teamcity','progress', 'html'],
         reporters: ['progress', 'html'],
@@ -16,7 +16,7 @@ module.exports = function (config) {
             subPageTitle: 'A sample project description'
         },
         preprocessors: {
-           './spec/**/tests.js': ['webpack']
+           './test/**/spec.js': ['webpack']
         },
         webpack: {
            module: {
