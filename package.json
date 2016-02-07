@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-karma-es-6",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Yeoman generator to author libraries in ES2015 using webpack and karma (phantomjs)",
   "homepage": "",
   "author": {
