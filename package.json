@@ -9,9 +9,6 @@
     "url": ""
   },
   "repository": "https://github.com/AOlefirenko/generator-webpack-karma-es6.git",
-  "files": [
-    "generators"
-  ],
   "main": "generators\\index.js",
   "keywords": [
     "webpack",
