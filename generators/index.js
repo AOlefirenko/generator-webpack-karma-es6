@@ -20,7 +20,7 @@ module.exports = generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the ' + chalk.red('Babel Webpack Library Boilerplate') + ' generator!'
+      'Welcome to the ' + chalk.red('Webpack karma es6 Library Boilerplate') + ' generator!'
     ));
 
     Promise.all([exec('npm whoami').catch(function(e) {
@@ -91,7 +91,6 @@ module.exports = generators.Base.extend({
       this.template('src', 'src');
       mkdirp.sync('test');
       this.template('test/*.js', 'test');
-      this.template('test/eslintrc', 'test/.eslintrc');
       mkdirp.sync('webpack');
       this.template('webpack/_webpack.config.base.js', 'webpack/webpack.config.base.js');
       this.template('webpack/_webpack.config.development.js', 'webpack/webpack.config.development.js');
