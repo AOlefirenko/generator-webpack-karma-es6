@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    basePath: '.',
+    basePath: '../',
     autoWatch: false,
     singleRun: true,
     colors: false,
