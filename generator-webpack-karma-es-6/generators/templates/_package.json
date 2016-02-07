@@ -1,0 +1,59 @@
+{
+  "name": "<%= repo %>",
+  "version": "0.0.1",
+  "description": "<%- description %>",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint src test",
+    "test": "karma start karma.conf.js",
+    "build:lib": "babel src --out-dir lib --source-maps",
+    "build:umd": "webpack src/index.js dist/<%= repo %>.js --config webpack/webpack.config.development.js",
+    "build:umd:min": "webpack src/index.js dist/<%= repo %>.min.js --config webpack/webpack.config.production.js",
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min"
+  },
+  "npmName": "<%= repo %>",
+  "author": "<%- author %>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= user %>/<%= repo %>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= user %>/<%= repo %>/issues"
+  },
+  "keywords": [
+    "<%= repo %>"
+  ],
+  "devDependencies": {
+    "babel-core": "^5.5.8",
+    "babel-loader": "^5.1.4",
+    "babel-runtime": "^5.5.8",
+    "babel-eslint": "^4.1.0",
+    "eslint": "^1.7.1",
+    "jasmine-core": "^2.4.1",
+    "json5": "^0.4.0",
+    "karma": "^0.13.19",
+    "karma-htmlfile-reporter": "latest",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "latest",
+    "karma-teamcity-reporter": "latest",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^2.1.3",
+    "webpack": "^1.12.13",
+    "rimraf": "^2.3.4",
+  },
+  "dependencies":{
+    "lodash": "^4.2.1"
+  },
+  "devEngines": {
+    "node": "4.x || 5.x",
+    "npm": "2.x || 3.x"
+  }
+}

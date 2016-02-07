@@ -1,0 +1,23 @@
+{
+  "name": "generator-webpack-karma-es-6",
+  "version": "0.0.0",
+  "description": "A Yeoman generator to author libraries in ES2015 using webpack and karma (phantomjs)",
+  "homepage": "",
+  "author": {
+    "name": "Andrey Olefirenko",
+    "email": "ole.olefirenko@gmail.com",
+    "url": ""
+  },
+  "repository": "https://github.com/AOlefirenko/generator-webpack-karma-es6.git",
+  "files": [
+    "generators"
+  ],
+  "main": "generators\\index.js",
+  "keywords": [
+    "webpack",
+    "karma",
+    "unit tests",
+    "es6",
+    "es2015"
+  ]
+}
