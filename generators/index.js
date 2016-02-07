@@ -84,7 +84,6 @@ module.exports = generators.Base.extend({
       this.template('editorconfig', '.editorconfig');
       this.template('gitignore', '.gitignore');
       this.template('_package.json', 'package.json');
-      this.template('karma.conf.js', 'karma.conf.js');
       this.template('LICENSE', 'LICENSE');
       this.template('README.md', 'README.md');
       mkdirp.sync('src');
