@@ -9,7 +9,7 @@
     "url": ""
   },
   "repository": "https://github.com/AOlefirenko/generator-webpack-karma-es6.git",
-  "main": "generators\\index.js",
+  "main": "generators/index.js",
   "keywords": [
     "webpack",
     "karma",
