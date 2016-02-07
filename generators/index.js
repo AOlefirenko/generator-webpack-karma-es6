@@ -95,6 +95,10 @@ module.exports = generators.Base.extend({
       this.template('webpack/_webpack.config.base.js', 'webpack/webpack.config.base.js');
       this.template('webpack/_webpack.config.development.js', 'webpack/webpack.config.development.js');
       this.template('webpack/_webpack.config.production.js', 'webpack/webpack.config.production.js');
+      mkdirp.sync('karma');
+      this.template('karma/_karma.config.base.js', 'karma/karma.config.base.js');
+      this.template('karma/_karma.config.development.js', 'karma/karma.config.development.js');
+      this.template('karma/_karma.config.production.js', 'karma/karma.config.production.js');
     }
   },
 

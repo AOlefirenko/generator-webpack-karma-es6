@@ -10,9 +10,10 @@
     "src"
   ],
   "scripts": {
-    "clean": "rimraf lib dist coverage",
+    "clean": "rimraf lib dist",
     "lint": "eslint src test",
-    "test": "karma start karma.conf.js",
+    "test": "karma start karma/karma.config.development.js",
+    "test:teamcity": "karma start karma/karma.config.production.js",
     "build:lib": "babel src --out-dir lib --source-maps",
     "build:umd": "webpack src/index.js dist/<%= repo %>.js --config webpack/webpack.config.development.js",
     "build:umd:min": "webpack src/index.js dist/<%= repo %>.min.js --config webpack/webpack.config.production.js",
