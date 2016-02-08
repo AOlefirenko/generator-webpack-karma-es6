@@ -1,4 +1,4 @@
-# generator-babel-webpack [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-webpack-karma-es6 
 > A Yeoman generator to author libraries in ES2015 using webpack and karma (phantomjs).
 
 ## Installation
