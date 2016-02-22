@@ -2,7 +2,7 @@
   "name": "<%= repo %>",
   "version": "0.0.1",
   "description": "<%- description %>",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "jsnext:main": "src/index.js",
   "files": [
     "dist",
@@ -14,17 +14,16 @@
     "lint": "eslint src test",
     "test": "karma start karma/karma.config.development.js",
     "test:teamcity": "karma start karma/karma.config.production.js",
-    "build:lib": "babel src --out-dir lib --source-maps",
     "build:umd": "webpack src/index.js dist/<%= repo %>.js --config webpack/webpack.config.development.js",
     "build:umd:min": "webpack src/index.js dist/<%= repo %>.min.js --config webpack/webpack.config.production.js",
-    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min"
+    "build": "npm run clean && npm run build:umd && npm run build:umd:min"
   },
   "npmName": "<%= repo %>",
   "author": "<%- author %>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<%= user %>/<%= repo %>.git"
+    "url": "git+https://github.com/<%= user %>/<sss%= repo %>.git"
   },
   "bugs": {
     "url": "https://github.com/<%= user %>/<%= repo %>/issues"
@@ -33,9 +32,10 @@
     "<%= repo %>"
   ],
   "devDependencies": {
-    "babel-core": "^5.5.8",
-    "babel-loader": "^5.1.4",
-    "babel-runtime": "^5.5.8",
+    "babel-core": "^6.5.x",
+    "babel-loader": "^6.2.x",
+    "babel-preset-es2015": "^6.5.x",
+    "babel-runtime": "^6.5.x",
     "babel-eslint": "^4.1.0",
     "eslint": "^1.7.1",
     "jasmine-core": "^2.4.1",
@@ -50,12 +50,12 @@
     "webpack": "^1.12.13",
     "rimraf": "^2.3.4"
   },
-  "dependencies":{
+  "dependencies": {
     "lodash": "^4.2.1",
     "es6-promise": "latest"
   },
-  "devEngines": {
+  "engines": {
     "node": "4.x || 5.x",
-    "npm": "2.x || 3.x"
+    "npm": "3.x"
   }
 }
